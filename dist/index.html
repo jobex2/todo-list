@@ -8,36 +8,69 @@
     <title>Todo List</title>
 </head>
 <body>
-    <header class="header">
-      <div class="logo"><h1 class="page-name">Todo List</h1>
-      </div><button class="button-open-nav" id="button-open-nav"></button>
-    </header>
-    <main class="main">
-      <nav class="nav" id="nav">
-        <!-- Default projects -->
-        <div class="default-projects-list">
-          <button class="button-default-project" id="button-inbox-projects">Inbox</button>
-          <button class="button-default-project" id="button-today-projects">Today</button>
-          <button class="button-default-project" id="button-week-projects">This week</button>
+  <header class="header">
+    <div class="logo"><h1 class="page-name">Todo List</h1>
+    </div>
+  </header>
+  <div class="flex-middle">
+    <div class="nav">
+      <!-- Default projects -->
+      <div class="default-projects-list">
+        <button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mailbox" viewBox="0 0 16 16">
+          <path d="M4 4a3 3 0 0 0-3 3v6h6V7a3 3 0 0 0-3-3zm0-1h8a4 4 0 0 1 4 4v6a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V7a4 4 0 0 1 4-4zm2.646 1A3.99 3.99 0 0 1 8 7v6h7V7a3 3 0 0 0-3-3H6.646z"/>
+          <path d="M11.793 8.5H9v-1h5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.354-.146l-.853-.854zM5 7c0 .552-.448 0-1 0s-1 .552-1 0a1 1 0 0 1 2 0z"/>
+        </svg>
+        Inbox</button>
+        <button> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-event" viewBox="0 0 16 16">
+          <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+          <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+        </svg>
+        Today</button>
+        <button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-range" viewBox="0 0 16 16">
+          <path d="M9 7a1 1 0 0 1 1-1h5v2h-5a1 1 0 0 1-1-1zM1 9h4a1 1 0 0 1 0 2H1V9z"/>
+          <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+        </svg>
+        This week</button>
+      </div>
+      <!-- User projects -->
+      <h1>Projects</h1>
+      <button> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+      </svg>
+       Add Project</button>
+      <div class="project-add-popup">
+        <input type="text" name="project-name" placeholder="Project Name" class="new-project-input"/>
+        <div class="submit-buttons">
+          <button class="button-add"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+          </svg>
+          Add</button>
+          <button class="button-cancel"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
+            <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+          </svg>
+          Cancel</button>
         </div>
-        <!-- User projects -->
-        <h1 class="projects-title">Projects</h1>
-        <div class="projects-list" id="projects-list"></div>
-        <button class="button-add-project" id="button-add-project">Add Project</button>
-        <div class="add-project-popup" id="add-project-popup">
-          <input class="input-add-project-popup" id="input-add-project-popup" type="text"/>
-          <div class="add-project-popup-buttons">
-            <button class="button-add-project-popup" id="button-add-project-popup">Add</button>
-            <button class="button-cancel-project-popup" id="button-cancel-project-popup">Cancel</button>
-          </div>
+      </div>
+    </div>
+    <!-- Tasks -->
+    <div class="main">
+      <h1 class="content">Inbox</h1>
+      <div class="content">
+        <div class="task-left">
+          <input type="checkbox">
+          <div>Task 1</div>
         </div>
-      </nav>
-      <!-- Tasks -->
-      <div class="project-preview" id="project-preview"></div>
-    </main>
-    <footer class="footer">
-      <p>Copyright © 2022 JoBeX2</p>
-      <a href="https://github.com/jobex2" target="_blank">
-    </footer>
+        <div class="task-date">
+          <input type="date">
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <p>Copyright © 2022
+      <a href="https://github.com/jobex2" target="_blank">JoBeX2</a>
+    </p>
+  </footer>
 </body>
 </html>

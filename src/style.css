@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    height: 100vh;
+    /*children*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+ 
+.header {
+    background-color: blue;
+    margin: 0;
+}
+
+.page-name {
+    padding: 16px;
+    margin: 0;
+    color:whitesmoke;
+}
+
+.flex-middle {
+    /*children*/
+    display: flex;
+    /* self */
+    flex-grow: 1;
+}
+
+.nav {
+    width: 300px;
+    background-color: aqua;
+    padding-left: 25px;
+
+    /* self */
+    flex-grow: 0;
+
+    /* childern */
+    display: flex;
+    flex-direction: column;
+    align-content: left;
+}
+
+.main {
+    margin: 0 300px 0 150px;
+
+    /*children*/
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    /* self */
+    flex-grow: 1;
+}
+.default-projects-list {
+    /* childern */
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+
+ul {
+    list-style-type: ;
+    padding: 0;
+}
+
+button {
+    font-size: larger;
+    background-color: aqua;
+    width: 150px;
+    height: auto;
+    text-align: left;
+    margin: 10px 0;
+    border: none;
+    cursor: pointer;
+}
+
+.submit-buttons {
+    display: flex;
+}
+
+.button-add, .button-cancel{
+    background-color: green;
+    border-radius: 8px;
+    box-shadow: 1px 1px grey;
+    padding: 8px;
+    width: 120px;
+    margin: 16px 16px 0 0;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+}
+
+.button-cancel {
+    background-color: red;
+}
+
+.new-project-input {
+    width: 250px;
+    height: 40px;
+}
+
+.footer {
+    background-color: blue;
+}
+
+.footer p {
+    color: whitesmoke;
+    font-size: large;
+    font-weight: bold;
+    padding-left: 25px;
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.content {
+    /* childern */
+    display: flex;
+    justify-content: space-between;
+
+    /* self */
+    align-self: stretch;
+}
+
+input[type="checkbox"]{
+    width: 20px;
+    height:20px;
+
+}
+
+
+.task-left div{
+    display: inline-block;
+    font-size: x-large;
+    padding-left: 20px;
+}
