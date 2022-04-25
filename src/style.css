@@ -5,6 +5,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: aliceblue;
 }
  
 .header {
@@ -27,7 +28,7 @@ body {
 
 .nav {
     width: 300px;
-    background-color: aqua;
+    background-color: rgb(0, 106, 255);
     padding-left: 25px;
 
     /* self */
@@ -64,17 +65,24 @@ ul {
 
 button {
     font-size: larger;
-    background-color: aqua;
-    width: 150px;
-    height: auto;
+    background-color: rgb(0, 106, 255);
+    width: 250px;
+    height: 50px;
     text-align: left;
     margin: 10px 0;
     border: none;
     cursor: pointer;
+    border-radius: 10px;
 }
+
+
 
 .submit-buttons {
     display: flex;
+}
+
+.add-project-button {
+    margin: 20px 0;
 }
 
 .button-add, .button-cancel{
@@ -93,7 +101,7 @@ button {
     background-color: red;
 }
 
-.new-project-input {
+#new-project-input {
     width: 250px;
     height: 40px;
 }
@@ -107,6 +115,7 @@ button {
     font-size: large;
     font-weight: bold;
     padding-left: 25px;
+    text-align: center;
 }
 
 a {
@@ -114,12 +123,18 @@ a {
     color: whitesmoke;
 }
 
-.content {
+.task {
     /* childern */
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin: 0 40px 0 0;
+    height: 60px;
+    padding: 8px;
+    border-radius: 16px;
+}
 
-    /* self */
+#tasks {
     align-self: stretch;
 }
 
@@ -130,8 +145,43 @@ input[type="checkbox"]{
 }
 
 
-.task-left div{
+.task-title{
     display: inline-block;
     font-size: x-large;
     padding-left: 20px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.project-add-popup {
+    margin-top: -75px;
+}
+
+.hover-button:hover {
+    background-color: rgb(200, 195, 195);
+}
+
+.add-task-button {
+    width: 100%;
+    margin-top: 20px;
+    background-color: aliceblue;
+}
+
+#hidden-task {
+    width: 100%;
+}
+
+#new-task-input {
+    width: 100%;
+    height: 40px;
+}
+
+.task-add-popup {
+    margin-top: -58px;
+}
+
+.hover:hover {
+    background-color: rgb(200, 195, 195);
 }
