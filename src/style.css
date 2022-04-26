@@ -163,6 +163,10 @@ input[type="checkbox"]{
     background-color: rgb(200, 195, 195);
 }
 
+.hover-button:focus {
+    background-color: rgb(200, 195, 195);
+}
+
 .add-task-button {
     width: 100%;
     margin-top: 20px;

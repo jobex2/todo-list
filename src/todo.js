@@ -1,20 +1,22 @@
+import { storeProject, storeProjectNamesList } from "./storage";
+
 const Name = (name) => {
     let title =  name;
-    const getName = () => console.log(title);
+    const getName = () => title;
     const setName = (newName) => {title = newName}
     return {getName, setName};
 }
 
 const Discription = () => {
     let discription = 'None';
-    const getDiscription = () => console.log(discription);
+    const getDiscription = () => discription;
     const setDiscription = (newString) => {discription = newString};
     return {getDiscription, setDiscription};
 }
 
 const Date = () => {
     let dueDate = 'None';
-    const getDate = () => console.log(dueDate);
+    const getDate = () => dueDate;
     const setDate= (newDate) => {dueDate = newDate};
     return {getDate, setDate};
 }
@@ -26,7 +28,7 @@ const Completion = () => {
 
 const Todo = (name) => {
     let priority = 0;
-    const getPriority = () => console.log(priority);
+    const getPriority = () => priority;
     const setPriority = (newPriority) => priority = newPriority;
     return Object.assign({}, Name(name), Completion(), Discription(), 
         Date(), {getPriority, setPriority});    
@@ -40,4 +42,25 @@ const Project = (name) => {
     return Object.assign({}, Name(name), Completion(), Discription(), 
         Date(), {getTodos, add});
 }
-export {Todo, Project};
+
+function newProject (name, projectsList) {
+    let project = Project(name);
+    projectsList[name] = project;
+    storeProject(project);
+    storeProjectNamesList(name);
+}
+
+
+function newTodo (name, focus, projects) {
+    let project = {};
+    projects.forEach((item) => {
+        if(item.getName() == focus){
+            project = item;
+        }
+    });
+    let todo = Todo(name);
+    project.add(todo);
+    storeProject(project);
+}
+
+export {Todo, newTodo, Project, newProject};
